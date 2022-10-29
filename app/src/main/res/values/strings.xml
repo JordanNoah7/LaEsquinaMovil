@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LaEsquina</string>
+    <string name="titulo">La Esquina</string>
+    <string name="inicia_sesion">INICIAR SESIÓN</string>
+    <string name="correo">Correo</string>
+    <string name="example_email">ejemplo@email.com</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="olvidaste">Olvidaste tu contraseña</string>
+    <string name="registrar">Registrar</string>
 </resources>
