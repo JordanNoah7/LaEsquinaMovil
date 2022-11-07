@@ -12,4 +12,9 @@
     <color name="Blue">#2E8BC0</color>
     <color name="BabyBlue">#B1D4E0</color>
     <color name="blancoTransparente">#7F000000</color>
+    <color name="fondo">#006D7C</color>
+    <color name="boton">#2C9DA5</color>
+    <color name="fondo2">#F7F7F7</color>
+    <color name="texto">#005C5C</color>
+    <color name="texto_blanco">#E0FFFF</color>
 </resources>

@@ -5,23 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/fondo_login">
+    android:background="@color/fondo">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/titulo" />
 
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="540dp"
+        android:layout_marginBottom="490dp"
         android:text="@string/titulo"
         android:fontFamily="@font/dancing_script_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold|italic"
         android:textSize="40sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/texto_blanco"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/fondo2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bLoginPage"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bLoginPage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/fondo2"
+        android:textColor="@color/texto"
+        android:fontFamily="@font/quicksand_bold"
+        android:onClick="Login"
+        android:text="@string/inicia_sesion"
+        app:layout_constraintEnd_toStartOf="@+id/bRegisterPage"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <Button
+        android:id="@+id/bRegisterPage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/fondo"
+        android:textColor="@color/texto_blanco"
+        android:fontFamily="@font/quicksand_bold"
+        android:onClick="Login"
+        android:text="@string/registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@id/bLoginPage"
+        app:layout_constraintTop_toTopOf="@+id/bLoginPage" />
 
     <EditText
         android:id="@+id/etCorreo"
@@ -29,41 +82,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="380dp"
         android:autofillHints="emailAddress"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bLoginPage"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/tvInicioSesion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="480dp"
-        android:text="@string/inicia_sesion"
-        android:fontFamily="@font/quicksand_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="17sp"
-        android:textAlignment="center"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/tvCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="430dp"
-        android:text="@string/correo"
-        android:fontFamily="@font/quicksand_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="15sp"
-        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -71,42 +97,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="295dp"
         android:autofillHints="password"
         android:ems="10"
         android:hint="@string/contrasena"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCorreo"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/bLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:backgroundTint="@color/DarkBlue"
+        android:backgroundTint="@color/boton"
         android:onClick="Login"
         android:text="@string/inicia_sesion"
         android:fontFamily="@font/quicksand_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="340dp"
-        android:text="@string/contrasena"
-        android:fontFamily="@font/quicksand_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="15sp"
-        android:textColor="@color/black"/>
+        app:layout_constraintStart_toStartOf="@id/etPassword" />
 
     <TextView
         android:id="@+id/tvOlvido"
@@ -120,29 +131,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="16sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/tvRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
-        android:text="@string/registrar"
-        android:fontFamily="@font/quicksand_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="16sp"
-        android:textColor="@color/black"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/titulo" />
+        android:textColor="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
